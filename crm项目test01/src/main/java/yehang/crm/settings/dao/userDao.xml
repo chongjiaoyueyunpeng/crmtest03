@@ -22,7 +22,7 @@
     <!--</select>-->
     <select id="login" resultType="yehang.crm.settings.domain.user">
         <!--要执行的 sql 语句-->
-        select * from tbl_user where loginAct=#{name} and loginPwd=#{password}
+        select * from tbl_user where loginAct=#{username} and loginPwd=#{passwd}
     </select>
 
 </mapper>
