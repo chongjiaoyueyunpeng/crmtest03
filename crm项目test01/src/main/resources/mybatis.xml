@@ -33,7 +33,7 @@
     </environments>
     <mappers>
         <!--告诉 mybatis 要执行的 sql 语句的位置-->
-        <mapper resource="yehang/dao/t_userDao.xml"></mapper>
+        <mapper resource="yehang/crm/settings/dao/userDao.xml"></mapper>
 
         <!--第二种方式:指定这个包下所有的xml文件-->
         <!--<package name="yehang.dao"></package>-->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+ namespace：必须有值，自定义的唯一字符串
+ 推荐使用：dao 接口的全限定名称
+-->
+<mapper namespace="yehang.crm.settings.dao.userDao">
+    <!--<resultMap id="map01" type="yehang.entity.t_user">-->
+        <!--&lt;!&ndash;主键用id&ndash;&gt;-->
+        <!--<id column="id" property="id"></id>-->
+        <!--&lt;!&ndash;非主键用result&ndash;&gt;-->
+        <!--<result column="name" property="name"></result>-->
+        <!--<result column="sex" property="sex"></result>-->
+        <!--<result column="passwd" property="passwd"></result>-->
+        <!--<result column="email" property="email"></result>-->
+    <!--</resultMap>-->
+    <!--<select id="chaxun" resultMap="map01">-->
+        <!--&lt;!&ndash;要执行的 sql 语句&ndash;&gt;-->
+        <!--select * from t_user-->
+    <!--</select>-->
+    <select id="login" resultType="yehang.crm.settings.domain.user">
+        <!--要执行的 sql 语句-->
+        select * from tbl_user where loginAct=#{name} and loginPwd=#{password}
+    </select>
+
+</mapper>
